@@ -23,6 +23,7 @@ Route::get('/', function () {
 
 Route::get('/search',[App\Http\Controllers\ServiceController::class,'search'])->name('search');
 Route::post('/create',[App\Http\Controllers\ServiceController::class,'create_resurs'])->name('create');
+Route::get('/get-data/{translate}',[App\Http\Controllers\ServiceController::class,'get_data'])->name('get-data');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
